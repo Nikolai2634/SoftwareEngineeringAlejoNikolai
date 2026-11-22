@@ -11,3 +11,4 @@ __pycache__/
 *.log
 # Lokale Engineering-Anweisungen
 AGENTS.override.md
+._*
