@@ -159,7 +159,9 @@ Thomas Weber pendelt per ÖPNV nach hause, er findet an der Bushaltestelle eine 
 
 > Sammeln Sie mit Ihrem Sitznachbarn die Anwendungsfälle und Akteure Ihrer Fallstudie. Gruppieren Sie die Anwendungsfälle innerhalb Ihrer Systemgrenzen und assoziieren Sie die Anwendungsfälle mit den Akteuren und untereinander. Überlegen Sie, ob Anwendungsfälle aufgeteilt, zusammengefasst oder Teile generalisiert werden können. Wenn Sie mehr als 10 Anwendungsfälle gefunden haben, versuchen Sie sich auf die wichtigsten Anwendungsfälle zu konzentrieren. Jeder Kursteilnehmer sollte ein Anwendungsfalldiagramm erstellen, auch wenn Sie sich in der Gruppe absprechen.
 
-Das Anwendungsfalldiagramm „Fundbüro App“ liegt in Textform in der Datei [`anwendungsfalldiagramm.csv`](anwendungsfalldiagramm.csv) (Akteure, Anwendungsfälle, Assoziationen, «include»/«extend»-Beziehungen).
+![Anwendungsfalldiagramm Fundbüro App](anwendungsfalldiagramm.png)
+
+Textversion des Diagramms (für die KI-Analyse): [`anwendungsfalldiagramm.csv`](anwendungsfalldiagramm.csv) (Akteure, Anwendungsfälle, Assoziationen, «include»/«extend»-Beziehungen).
 
 ---
 
