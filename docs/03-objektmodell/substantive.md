@@ -2,41 +2,41 @@
 
 Umfang: `docs/01-anforderungen/uebung2.md`, Zeilen 33–63 und 85–92: funktionale und nichtfunktionale Anforderungen sowie `docs/01-anforderungen/uebung1.md`, Zeilen 113–156 und 182–262: User Stories und detaillierter Anwendungsfall. Die Abschnitte über Personas und das Anwendungsfalldiagramm wurden nicht ausgewertet.
 
-| ID | Originalform(en) | Grundform / Mehrwortbegriff | Fundstelle(n) mit Originalbeleg | Studentische Einordnung | Studentische Begründung |
+| ID | Originalform(en) | Grundform / Mehrwortbegriff | Fundstelle(n) mit Originalbeleg | Einordnung | Begründung |
 |---|---|---|---|---|---|
-| 001 | Konto | Konto | uebung2 F-001 Z33 „ein Konto mit Telefonnummer“; uebung1 Hauptablauf Z206 „legt ein Konto ohne Passwort an“ | | |
-| 002 | Nutzern, Nutzer, Nutzers | Nutzer | uebung2 F-001 Z33; F-002 Z34; NF-007 Z91; uebung1 US 22 Z155 „Als Nutzer“ | | |
-| 003 | Telefonnummer, Nummer | Telefonnummer | uebung2 F-001 Z33 „Telefonnummer“; F-002 Z34 „Telefonnummer“; uebung1 Hauptablauf Z205 „Telefonnummer“ | | |
-| 004 | Verifizierungscode, Code | Verifizierungscode | uebung2 F-001 Z33; F-002 Z34; uebung1 Hauptablauf Z206 „per Code“ | | |
-| 005 | Meldungen, Meldung, Meldungsstatus | Meldung | uebung2 F-002 Z34 „Meldungen“; F-003 Z35 „Fundmeldung“; F-010 Z42 „Verlustmeldung“; uebung1 US 4 Z124 „Verlustmeldung“ | | |
-| 006 | Anmeldung, Anmeldungen | Anmeldung | uebung2 F-002 Z34 „Anmeldung“; F-002 Z34 „Anforderungsname Anmeldung“ | | |
-| 007 | System | System | uebung2 F-001 Z33 „muss das System“; uebung1 Beteiligte Systeme Z249 „Beteiligte Systeme“ | | |
-| 008 | Möglichkeit | Möglichkeit | uebung2 F-001 Z33 „die Möglichkeit bieten“; uebung1 US 6 Z126 „die Möglichkeit“ | | |
-| 009 | Auswahl, Auswahlmöglichkeiten | Auswahl | uebung2 F-001 Z33 „Nach Auswahl“; uebung1 Hauptablauf Z208 „2 Auswahlmöglichkeiten“ | | |
-| 010 | Finder | Finder | uebung2 F-003 Z35; F-008 Z40; uebung1 US 1 Z122; Anwendungsfall Z186 „Primär“ | | |
-| 011 | Fundmeldung, Meldung | Fundmeldung | uebung2 F-003 Z35; F-011 Z43; uebung1 US 19 Z139 „Fundmeldung“ | | |
-| 012 | Gegenstandsart | Gegenstandsart | uebung2 F-003 Z35; F-010 Z42; uebung1 US 4 Z124 | | |
+| 001 | Konto | Konto | uebung2 F-001 Z33 „ein Konto mit Telefonnummer“; uebung1 Hauptablauf Z206 „legt ein Konto ohne Passwort an“ | Objekt| Fachliches Objekt zur Verwaltung eines Nutzerkontos samt Telefonnummer|
+| 002 | Nutzern, Nutzer, Nutzers | Nutzer | uebung2 F-001 Z33; F-002 Z34; NF-007 Z91; uebung1 US 22 Z155 „Als Nutzer“ | Objekt | Fachliche Person/Rolle, die das System verwendet (Finder und Verlierer)|
+| 003 | Telefonnummer, Nummer | Telefonnummer | uebung2 F-001 Z33 „Telefonnummer“; F-002 Z34 „Telefonnummer“; uebung1 Hauptablauf Z205 „Telefonnummer“ | Attribut |Kontaktmerkmal, das einem Konto bzw. einer Person zugeordnet ist |
+| 004 | Verifizierungscode, Code | Verifizierungscode | uebung2 F-001 Z33; F-002 Z34; uebung1 Hauptablauf Z206 „per Code“ | Wert | Temporärer Prüfwert im Verifizierungsablauf, kein eigenständiges Domänenobjekt |
+| 005 | Meldungen, Meldung, Meldungsstatus | Meldung | uebung2 F-002 Z34 „Meldungen“; F-003 Z35 „Fundmeldung“; F-010 Z42 „Verlustmeldung“; uebung1 US 4 Z124 „Verlustmeldung“ | Obkekt | Oberbegriff für Fund und Verlustmeldungen|
+| 006 | Anmeldung, Anmeldungen | Anmeldung | uebung2 F-002 Z34 „Anmeldung“; F-002 Z34 „Anforderungsname Anmeldung“ |nicht fachlich |Bezeichnet den Anmeldevorgang bzw. einen Anforderuns -UI Begriff |
+| 007 | System | System | uebung2 F-001 Z33 „muss das System“; uebung1 Beteiligte Systeme Z249 „Beteiligte Systeme“ |nicht fachlich | |
+| 008 | Möglichkeit | Möglichkeit | uebung2 F-001 Z33 „die Möglichkeit bieten“; uebung1 US 6 Z126 „die Möglichkeit“ |nicht fachlich | |
+| 009 | Auswahl, Auswahlmöglichkeiten | Auswahl | uebung2 F-001 Z33 „Nach Auswahl“; uebung1 Hauptablauf Z208 „2 Auswahlmöglichkeiten“ | nicht fachlich| |
+| 010 | Finder | Finder | uebung2 F-003 Z35; F-008 Z40; uebung1 US 1 Z122; Anwendungsfall Z186 „Primär“ | Objekt | Fachliche Person/Rolle, die einen Gegenstand gefunden und gemeldet hat|
+| 011 | Fundmeldung, Meldung | Fundmeldung | uebung2 F-003 Z35; F-011 Z43; uebung1 US 19 Z139 „Fundmeldung“ |Objekt | Fachliches Objekt zur Erfassung und Verwaltung eines gemeldeten Funds |
+| 012 | Gegenstandsart | Gegenstandsart | uebung2 F-003 Z35; F-010 Z42; uebung1 US 4 Z124 | Attribut| Kategorie / Typmerkmal eines Gegenstands oder Meldung|
 | 013 | Gegenstand, Gegenstands | Gegenstand | uebung2 F-005 Z37; F-006 Z38; uebung1 US 17 Z137 „Gegenstand“ | | |
-| 014 | Fundort | Fundort | uebung2 F-003 Z35; F-004 Z36 | | |
+| 014 | Fundort | Fundort | uebung2 F-003 Z35; F-004 Z36 |Attribut | beschreibt die Fundsache|
 | 015 | Standort | Standort | uebung2 F-004 Z36; uebung1 Anwendungsfall Z201 „Standort“ | | |
-| 016 | Adresse | Adresse | uebung2 F-004 Z36; NF-003 Z87; uebung1 Hauptablauf Z220 „Adresse“ | | |
+| 016 | Adresse | Adresse | uebung2 F-004 Z36; NF-003 Z87; uebung1 Hauptablauf Z220 „Adresse“ | Attribut| gehört zum Fundbüro|
 | 017 | Karte, Karten | Karte | uebung2 F-004 Z36 „Karte“; uebung1 Hauptablauf Z219 „Karte“ | | |
-| 018 | Funddatum | Funddatum | uebung2 F-003 Z35 | | |
-| 019 | Fundzeit | Fundzeit | uebung2 F-003 Z35 | | |
-| 020 | Wertauswahl | Wertauswahl | uebung2 F-003 Z35; F-015 Z47 | | |
+| 018 | Funddatum | Funddatum | uebung2 F-003 Z35 |Attribut |gehört zur Fundmeldung |
+| 019 | Fundzeit | Fundzeit | uebung2 F-003 Z35 | Attribut| gehört zur Fundmeldung |
+| 020 | Wertauswahl | Wertauswahl | uebung2 F-003 Z35; F-015 Z47 | Attribut| gehört zur Fundmeldung |
 | 021 | Euro | Euro | uebung2 F-003 Z35; F-015 Z47 | | |
-| 022 | Beschreibung, Objektbeschreibung | Beschreibung | uebung2 F-003 Z35; F-010 Z42; uebung1 Hauptablauf Z212 „Objektbeschreibung“ | | |
-| 023 | Foto, Fotos | Foto | uebung2 F-005 Z37; F-017 Z49; uebung1 US 6 Z126; Hauptablauf Z213 „Foto“ | | |
+| 022 | Beschreibung, Objektbeschreibung | Beschreibung | uebung2 F-003 Z35; F-010 Z42; uebung1 Hauptablauf Z212 „Objektbeschreibung“ |Attribut |beschreibt die Fundsache |
+| 023 | Foto, Fotos | Foto | uebung2 F-005 Z37; F-017 Z49; uebung1 US 6 Z126; Hauptablauf Z213 „Foto“ |Attribut |gehört zur Fundsache |
 | 024 | Hochladen, Upload | Hochladen | uebung2 F-005 Z37 „Foto Hochladen“; uebung1 US 18 Z138 „per Foto“ | | |
 | 025 | KI-Unterstützung, KI-Dienst, KI-Chat-Assistent, KI-Matching | KI-Unterstützung; KI-Dienst; KI-Chat-Assistent; KI-Matching | uebung2 F-006 Z38; F-007 Z39; uebung1 Akteur Z188 „KI Dienst“; Hauptablauf Z211 „Ki chat box“ | | |
 | 026 | Identifikation, Bilderkennung | Identifikation | uebung2 F-006 Z38 „Identifikation“; uebung1 Beteiligte Systeme Z256 „Bilderkennung“ | | |
 | 027 | Merkmale, Details, Erkennungsmerkmale | Merkmal | uebung2 F-007 Z39 „Merkmale“; F-012 Z44; uebung1 Alternativer Ablauf Z236 „Erkennungsmerkmale“ | | |
 | 028 | Rückfragen | Rückfrage | uebung2 F-007 Z39 | | |
-| 029 | Fundbüros, Fundbüro | Fundbüro | uebung2 F-008 Z40; F-009 Z41; uebung1 US 1 Z122; Hauptablauf Z220 | | |
+| 029 | Fundbüros, Fundbüro | Fundbüro | uebung2 F-008 Z40; F-009 Z41; uebung1 US 1 Z122; Hauptablauf Z220 |Objekt |eigene Adresse und Öffnungszeiten |
 | 030 | Verlierer | Verlierer | uebung2 F-008 Z40; F-010 Z42; uebung1 Hauptablauf Z205 | | |
 | 031 | Umkreis | Umkreis | uebung2 F-008 Z40 | | |
 | 032 | Entfernung | Entfernung | uebung2 F-008 Z40 | | |
-| 033 | Öffnungszeiten | Öffnungszeit | uebung2 F-008 Z40; uebung1 US 1 Z122 | | |
+| 033 | Öffnungszeiten | Öffnungszeit | uebung2 F-008 Z40; uebung1 US 1 Z122 |Attribut |gehört zum Fundbüro |
 | 034 | Radius | Radius | uebung2 F-008 Z40 | | |
 | 035 | Hinweis | Hinweis | uebung2 F-008 Z40 | | |
 | 036 | Route, Routen | Route | uebung2 F-009 Z41; uebung1 US 1 Z122; Alternativ Z230 „Routen“ | | |
@@ -44,7 +44,7 @@ Umfang: `docs/01-anforderungen/uebung2.md`, Zeilen 33–63 und 85–92: funktion
 | 038 | Verlustort, Verlustorte | Verlustort | uebung2 F-010 Z42; uebung1 Alternativ Z233 „Verlustorten“ | | |
 | 039 | Verlustzeitraum | Verlustzeitraum | uebung2 F-010 Z42 | | |
 | 040 | Matching, Übereinstimmung | Matching | uebung2 F-011 Z43; uebung1 Hauptablauf Z211 „Match“ | | |
-| 041 | Fundsachen, Fundsache, Fundstück, Fundgegenstand | Fundsache | uebung2 F-011 Z43; F-013 Z45; uebung1 US 2 Z123 „Fundsache“ | | |
+| 041 | Fundsachen, Fundsache, Fundstück, Fundgegenstand | Fundsache | uebung2 F-011 Z43; F-013 Z45; uebung1 US 2 Z123 „Fundsache“ | Objekt | der gunfundene Gegenstand, eigene Merkmale|
 | 042 | Ort | Ort | uebung2 F-011 Z43; uebung1 Ausnahmen Z246 „Ort“ | | |
 | 043 | Datum | Datum | uebung2 F-011 Z43; F-014 Z46 | | |
 | 044 | Suchbereich | Suchbereich | uebung2 F-012 Z44 | | |
@@ -52,14 +52,14 @@ Umfang: `docs/01-anforderungen/uebung2.md`, Zeilen 33–63 und 85–92: funktion
 | 046 | Übergabe, Austausch | Übergabe | uebung2 F-013 Z45; F-014 Z46; uebung1 Nachbedingung Z201 „Austausch“ | | |
 | 047 | Abgabe | Abgabe | uebung2 F-014 Z46 | | |
 | 048 | Bestätigung | Bestätigung | uebung2 F-014 Z46; uebung1 Hauptablauf Z213 | | |
-| 049 | Fundnummer | Fundnummer | uebung2 F-014 Z46 | | |
+| 049 | Fundnummer | Fundnummer | uebung2 F-014 Z46 |Attribut | identifiziert die Fundmeldung|
 | 050 | Uhrzeit | Uhrzeit | uebung2 F-014 Z46; uebung1 Hauptablauf Z212 | | |
 | 051 | Abgabeort | Abgabeort | uebung2 F-014 Z46 | | |
 | 052 | Ausweis, Ausweise | Ausweis | uebung2 F-015 Z47; uebung1 US 10 Z130 | | |
 | 053 | Reisepass, Reisepässe | Reisepass | uebung2 F-015 Z47; uebung1 US 10 Z130 | | |
 | 054 | Führerschein, Führerscheine | Führerschein | uebung2 F-015 Z47; uebung1 US 10 Z130 | | |
 | 055 | Bankkarte, Bankkarten | Bankkarte | uebung2 F-015 Z47; uebung1 US 10 Z130 | | |
-| 056 | Geldbörse, Geldbörsen | Geldbörse | uebung2 F-015 Z47; uebung1 US 10 Z130 | | |
+| 056 | Geldbörse, Geldbörsen | Geldbörse | uebung2 F-015 Z47; uebung1 US 10 Z130 | Wert|Wert der Gegenstandtyp |
 | 057 | Schlüssel | Schlüssel | uebung2 F-015 Z47; uebung1 US 10 Z130; US 13 Z133 | | |
 | 058 | Handy, Handys | Handy | uebung2 F-015 Z47; uebung1 US 10 Z130 | | |
 | 059 | Tablet, Tablets | Tablet | uebung2 F-015 Z47; uebung1 US 10 Z130 | | |
@@ -90,8 +90,8 @@ Umfang: `docs/01-anforderungen/uebung2.md`, Zeilen 33–63 und 85–92: funktion
 | 084 | E-Mail | E-Mail | uebung2 F-025 Z57 | | |
 | 085 | SMS | SMS | uebung2 F-025 Z57 | | |
 | 086 | Anruf | Anruf | uebung2 F-025 Z57; uebung1 Hauptablauf Z209 | | |
-| 087 | Status | Status | uebung2 F-026 Z58; F-027 Z59; uebung1 US 15 Z135 | | |
-| 088 | Offen | Offen | uebung2 F-026 Z58; uebung1 Alternativ Z233 „offen“ | | |
+| 087 | Status | Status | uebung2 F-026 Z58; F-027 Z59; uebung1 US 15 Z135 | Attribut|Zustand der Fundmeldung |
+| 088 | Offen | Offen | uebung2 F-026 Z58; uebung1 Alternativ Z233 „offen“ |Wert | WErt des Status nach Meldung|
 | 089 | Möglicher Treffer | Möglicher Treffer | uebung2 F-026 Z58 | | |
 | 090 | Abgeholt | Abgeholt | uebung2 F-026 Z58 | | |
 | 091 | Fundgegenstand | Fundgegenstand | uebung2 F-027 Z59 | | |
@@ -129,7 +129,7 @@ Umfang: `docs/01-anforderungen/uebung2.md`, Zeilen 33–63 und 85–92: funktion
 | 123 | DSGVO | DSGVO | uebung1 US 22 Z142 | | |
 | 124 | Sprache, Italienisch | Sprache | uebung1 Hauptablauf Z208 „Sprachauswahl“; Z209 „Italienisch“ | | |
 | 125 | Startseite | Startseite | uebung1 Hauptablauf Z208 „home page“ | | |
-| 126 | Name | Name | uebung1 Hauptablauf Z209 „name“ | | |
+| 126 | Name | Name | uebung1 Hauptablauf Z209 „name“ |Attribut | gehört zum Nutzer|
 | 127 | Festnetzanschluss | Festnetzanschluss | uebung1 Alternativ Z228 „Festnetzanschluss“ | | |
 | 128 | Nummer | Nummer | uebung1 Alternativ Z228 „Nummer“ | | |
 | 129 | Zeitrahmen | Zeitrahmen | uebung1 Alternativ Z230 „Zeitrahmen“ | | |
