@@ -30,21 +30,21 @@ Fallstudie: **Fundbüro-App**
 
 | ID | Version | Status | Feature | Priorität | Anforderungsname | Beschreibung | Quelle |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| F-001 | 1 | Entwurf | Konto | Muss | Konto registrieren | Nach Auswahl von „Registrieren" muss das System neuen Nutzern die Möglichkeit bieten, ein Konto mit E-Mail-Adresse und Passwort zu erstellen. | Nutzer |
-| F-002 | 1 | Entwurf | Anmeldung | Muss | Anmleden | Nach Eingabe gültiger Zugangsdaten muss das System dem Nutzer die Möglichkeit bieten, sich anzumelden und auf seine Meldungen zuzugreifen. | Nutzer |
-| F-003 | 1 | Entwurf | Fundmeldung | Muss | Fundmeldung erstellen | Nach Auswahl von „Ich habe etwas gefunden" muss das System dem Finder die Möglichkeit bieten, eine Fundmeldung mit Gegenstandsart, Fundort, Funddatum, Fundzeit und optionaler Beschreibung zu erstellen. | Finder |
+| F-001 | 2 | Entwurf | Konto | Muss | Konto registrieren | Nach Auswahl von „Registrieren" muss das System neuen Nutzern die Möglichkeit bieten, ein Konto mit Telefonnummer zu erstellen und die Nummer per Verifizierungscode zu bestätigen. | Nutzer |
+| F-002 | 2 | Entwurf | Anmeldung | Muss | Anmeldung | Nach Eingabe seiner Telefonnummer und eines gültigen Verifizierungscodes muss das System dem Nutzer die Möglichkeit bieten, sich anzumelden und auf seine Meldungen zuzugreifen. | Nutzer |
+| F-003 | 2 | Entwurf | Fundmeldung | Muss | Fundmeldung erstellen | Nach Auswahl von „Ich habe etwas gefunden" muss das System dem Finder die Möglichkeit bieten, eine Fundmeldung mit Gegenstandsart, Fundort, Funddatum, Fundzeit, einer verpflichtenden Wertauswahl („unter 100 €“, „100 € oder mehr“ oder „weiß ich nicht“) und einer optionalen Beschreibung zu erstellen. | Finder |
 | F-004 | 1 | Entwurf | Fundmeldung | Muss | Fundort erfassen | Nach Start der Fundmeldung muss das System dem Finder die Möglichkeit bieten, den Fundort automatisch über den Standort oder manuell per Adresse bzw. Karte anzugeben. | Finder |
 | F-005 | 1 | Entwurf | Foto | Soll | Foto Hochladen | Nach Auswahl eines Fotos, muss das System den Nutzer die Möglichkeit bieten, ein Foto des Gegenstands hochzuladen. | Finder/Verlierer |
 | F-006 | 1 | Entwurf | KI-Unterstützung | Soll | Gegenstand Identifizieren | Nach Foto upload muss das System den Nutzer die Möglichkeit bieten eine KI-gestützte Identifikation des Gegenstands anzufordern. | Nutzer |
 | F-007 | 1 | Entwurf | KI-Unterstützung | Soll | Fehlende Merkmale abfragen | Nach KI-Fotoidentifikation muss das System den Nutzer die Möglichkeit bieten, fehlende Merkmale durch gezielte Rückfragen zu ergänzen. | Nutzer |
-| F-008 | 1 | Entwurf | Fundbüro | Muss | Fundbüros Anzeigen | Nach Eingabe eines Standorts oder Freigabe des aktuellen Standorts muss das System dem Finder und Verlierer die Möglichkeit bieten, Fundbüros in der Nähe inklusive Adresse, Entfernung und Öffnungszeiten anzuzeigen. | Finder/Verlierer |
+| F-008 | 2 | Entwurf | Fundbüro | Muss | Fundbüros Anzeigen | Nach Eingabe eines Standorts oder Freigabe des aktuellen Standorts muss das System dem Finder und Verlierer die Möglichkeit bieten, Fundbüros im Umkreis von 10 km inklusive Adresse, Entfernung und Öffnungszeiten anzuzeigen. Der Nutzer muss den Radius vergrößern können. Sind weniger als drei Fundbüros im Radius vorhanden, muss das System die drei nächsten Fundbüros mit einem Hinweis anzeigen. | Finder/Verlierer |
 | F-009 | 1 | Entwurf | Fundbüro | Muss | Route anzeigen | Nach Auswahl eines Fundbüros muss das System dem Nutzer die Möglichkeit bieten, eine Route zum Fundbüro anzuzeigen oder zu starten. | Finder/Verlierer |
 | F-010 | 1 | Entwurf | Verlustmeldung | Muss | Verlustmeldung Erstellen | Nach Auswahl von „Ich habe etwas verloren" muss das System dem Verlierer die Möglichkeit bieten, eine Verlustmeldung mit Gegenstandsart, Verlustort, Verlustzeitraum, Beschreibung und optionalem Foto zu erstellen. | Verlierer |
 | F-011 | 1 | Entwurf | Matching | Muss | Fundsachen Suchen | Nach Erstellen einer Verlustmeldung muss das System dem Verlierer die Möglichkeit bieten, passende Fundmeldungen anhand von Gegenstandsart, Ort, Datum und optionalen Merkmalen zu suchen. | Verlierer |
 | F-012 | 1 | Entwurf | Matching | Muss | Verlustmeldung Bearbeiten | Nach Aufruf einer eigenen Verlustmeldung muss das System dem Verlierer die Möglichkeit bieten, Beschreibung, Merkmale, Foto oder Suchbereich nachträglich zu ergänzen oder zu ändern. | Verlierer |
 | F-013 | 1 | Entwurf | Fundabgabe | Muss | Fundsache Abgeben | Nach Auswahl einer Fundsache muss das System dem Finder die Möglichkeit bieten, zwischen Abgabe im Fundbüro und direkter Übergabe an einen verifizierten Verlierer zu wählen. | Finder |
 | F-014 | 1 | Entwurf | Fundabgabe | Muss | Abgabe bestätigen | Nach Übergabe einer Fundsache muss das System dem Finder die Möglichkeit bieten, eine digitale Bestätigung mit Fundnummer, Datum, Uhrzeit und Abgabeort zu erhalten. | Finder |
-| F-015 | 1 | Entwurf | Sicherung Sensibler Gegenstände | Muss | Sensible Fundsachen sperren | Nach Kennzeichnung einer Fundsache als Ausweis, Bankkarte, Schlüssel, Handy, Laptop oder Wertsache muss das System die direkte Übergabe deaktivieren und zur Abgabe im Fundbüro leiten. | Finder/Verlierer |
+| F-015 | 2 | Entwurf | Sicherung Sensibler Gegenstände | Muss | Sensible Fundsachen sperren | Nach Kennzeichnung einer Fundsache als Ausweis, Reisepass, Führerschein, Bankkarte, Geldbörse, Schlüssel, Handy, Tablet, Laptop, Bargeld oder nach Auswahl „100 € oder mehr“ muss das System die direkte Übergabe deaktivieren und zur Abgabe im Fundbüro leiten. Bei „weiß ich nicht“ gilt dieselbe Sperrung. Die Wertauswahl ist bei jeder Fundmeldung Pflicht; „unter 100 €“ allein sperrt keine direkte Übergabe. Eine spätere Wertänderung des Fundbüros muss Mitarbeiter und Datum dokumentieren und darf den Ablageort Fundbüro nicht ändern. | Finder/Verlierer |
 | F-016 | 1 | Entwurf | Fundabholung | Muss | Fundsache Abholen | Nach Auswahl einer als gefunden gemeldeten Fundsache muss das System dem Verlierer die Möglichkeit bieten, einen Abholtermin bzw. eine Abholung im Fundbüro zu veranlassen. | Verlierer |
 | F-017 | 1 | Entwurf | Fundabholung | Muss | Eigentum Nachweisen | Vor Herausgabe einer Fundsache muss das System dem Verlierer die Möglichkeit bieten, sein Eigentum durch versteckte Merkmale, einen Zweitschlüssel, eine Seriennummer oder ein Foto nachzuweisen. | Verlierer |
 | F-018 | 1 | Entwurf | Direkte Übergabe | Soll | Direkte Übergabe vereinbaren | Nach einem bestätigten Treffer muss das System Finder und Verlierer die Möglichkeit bieten, eine direkte Übergabe an einem öffentlichen Treffpunkt zu vereinbaren | Finder/Verlierer |
@@ -54,7 +54,7 @@ Fallstudie: **Fundbüro-App**
 | F-022 | 1 | Entwurf | Sicherheit | Muss | Nutzer Melden | Nach Auswahl von „Melden" muss das System dem Nutzer die Möglichkeit bieten, eine andere Person wegen Missbrauchs, Belästigung oder Betrugs zu melden. | Nutzer |
 | F-023 | 1 | Entwurf | Finderlohn | Soll | Finderlohn angeben | Nach Auswahl der direkten Übergabe muss das System dem Finder die Möglichkeit bieten, anzugeben, ob er Finderlohn geltend machen möchte. | Finder |
 | F-024 | 1 | Entwurf | Finderlohn | Soll | Finderlohn Berechnen | Nach Eingabe eines geschätzten Gegenstandswerts muss das System dem Finder die Möglichkeit bieten, den gesetzlichen Mindest-Finderlohn automatisch berechnen zu lassen. | Finder |
-| F-025 | 1 | Entwurf | Benachrichtigung | Muss | Fundtreffer benachrichtigen | Nach Erstellung eines möglichen Treffers muss das System dem Verlierer die Möglichkeit bieten, per Push- oder E-Mail-Benachrichtigung informiert zu werden. | Verlierer |
+| F-025 | 2 | Entwurf | Benachrichtigung | Muss | Fundtreffer benachrichtigen | Nach Erstellung eines möglichen Treffers muss das System dem Verlierer die Möglichkeit bieten, per Push, E-Mail, SMS oder Anruf informiert zu werden. | Verlierer |
 | F-026 | 1 | Entwurf | Status | Muss | Meldungsstatus anzeigen | Nach Aufruf einer eigenen Meldung muss das System dem Finder und Verlierer die Möglichkeit bieten, den Status „Offen", „Möglicher Treffer", „Bestätigt" oder „Abgeholt" einzusehen. | Finder/Verlierer |
 | F-027 | 1 | Entwurf | Fundbüro | Muss | Fundsache erfassen | Nach Eingabe eines Fundgegenstands muss das System Fundbüro-Mitarbeitenden die Möglichkeit bieten, die Fundsache mit Beschreibung, Foto, Fundort, Fundzeit und Status zu erfassen. | Fundbüro-Mitarbeiter |
 | F-028 | 1 | Entwurf | Fundbüro | Muss | Abholung per QR-Code bestätigen | Nach Scannen eines gültigen QR-Codes muss das System Fundbüro-Mitarbeitenden die Möglichkeit bieten, die Abholung des Gegenstands zu bestätigen und die Übergabe zu dokumentieren. | Fundbüro-Mitarbeiter |
@@ -116,22 +116,22 @@ Fallstudie: **Fundbüro-App**
 
 ### F-003: Fundmeldung erstellen
 
-**Anforderung:** Nach Auswahl von „Ich habe etwas gefunden" muss das System dem Finder die Möglichkeit bieten, eine Fundmeldung mit Gegenstandsart, Fundort, Funddatum, Fundzeit und optionaler Beschreibung zu erstellen.
+**Anforderung:** Nach Auswahl von „Ich habe etwas gefunden" muss das System dem Finder die Möglichkeit bieten, eine Fundmeldung mit Gegenstandsart, Fundort, Funddatum, Fundzeit, einer verpflichtenden Wertauswahl („unter 100 €“, „100 € oder mehr“ oder „weiß ich nicht“) und einer optionalen Beschreibung zu erstellen.
 
 **Akzeptanzkriterien:**
 
-1. **Erfolgsfall:** Ein angemeldeter Finder wählt „Ich habe etwas gefunden", gibt „Geldbörse", „Sendlinger Tor, München", „20.11.2026" und „16:30 Uhr" ein und sendet die Meldung ab. Das System erstellt die Fundmeldung, zeigt die Fundnummer an und ändert den Status auf „Offen".
-2. **Pflichtfelder:** Der Finder versucht, die Meldung ohne Gegenstandsart, Fundort oder Funddatum abzusenden. Das System verhindert das Absenden und zeigt für jedes fehlende Pflichtfeld eine klare Fehlermeldung an.
+1. **Erfolgsfall:** Ein angemeldeter Finder wählt „Ich habe etwas gefunden", gibt „Geldbörse", „Sendlinger Tor, München", „20.11.2026", „16:30 Uhr" und „unter 100 €" ein und sendet die Meldung ab. Das System erstellt die Fundmeldung, zeigt die Fundnummer an und ändert den Status auf „Offen".
+2. **Pflichtfelder:** Der Finder versucht, die Meldung ohne Gegenstandsart, Fundort, Funddatum oder Wertauswahl abzusenden. Das System verhindert das Absenden und zeigt für jedes fehlende Pflichtfeld eine klare Fehlermeldung an.
 3. **Manueller Fundort:** Der Finder lehnt die Standortfreigabe ab. Das System bietet die Möglichkeit, den Fundort manuell über Adresse, PLZ oder per digitaler Karte einzugeben.
 4. **Optionale Beschreibung:** Der Finder lässt das Beschreibungsfeld leer. Das System akzeptiert die Fundmeldung trotzdem, sofern alle Pflichtfelder ausgefüllt sind.
 
 ### F-008: Fundbüros anzeigen
 
-**Anforderung:** Nach Eingabe eines Standorts oder Freigabe des aktuellen Standorts muss das System dem Finder und Verlierer die Möglichkeit bieten, Fundbüros in der Nähe inklusive Adresse, Entfernung und Öffnungszeiten anzuzeigen.
+**Anforderung:** Nach Eingabe eines Standorts oder Freigabe des aktuellen Standorts muss das System dem Finder und Verlierer die Möglichkeit bieten, Fundbüros im Umkreis von 10 km inklusive Adresse, Entfernung und Öffnungszeiten anzuzeigen. Der Nutzer muss den Radius vergrößern können. Sind weniger als drei Fundbüros im Radius vorhanden, muss das System die drei nächsten Fundbüros mit einem Hinweis anzeigen.
 
 **Akzeptanzkriterien:**
 
-1. **Erfolgsfall:** Ein Finder gibt „80331 München" ein. Das System zeigt mindestens drei Fundbüros im Umkreis von 10 km mit Adresse, Entfernung und Öffnungszeiten an.
+1. **Erfolgsfall:** Ein Finder gibt „80331 München" ein. Sind mindestens drei Fundbüros im Umkreis von 10 km vorhanden, zeigt das System diese mit Adresse, Entfernung und Öffnungszeiten an. Sind weniger als drei vorhanden, zeigt das System die drei nächsten Fundbüros mit einem Hinweis auf den erweiterten Suchbereich.
 2. **Standortfreigabe:** Ein Finder erlaubt die Standortfreigabe. Das System ermittelt den aktuellen Standort und sortiert die Fundbüros nach Entfernung/Ankunftszeit aufsteigend.
-3. **Standortfreigabe:** Ein Finder erlaubt die Standortbestimmung. Das System ermittelt den aktuellen Standort und sortiert die Fundbüros nach Entfernung aufsteigend.
-4. **Standortfreigabe:** Ein Finder erlaubt die Standortbestimmung. Das System ermittelt den aktuellen Standort und sortiert die Fundbüros nach Entfernung aufsteigend.
+3. **Keine Standortfreigabe:** Ein Finder erlaubt die Standortbestimmung nicht. Das System zeigt ein Eingabefeld für Adresse oder PLZ.
+4. **Ungültige PLZ:** Der Finder gibt die PLZ „00000“ ein. Das System zeigt die Meldung „PLZ nicht gefunden“.
