@@ -28,16 +28,18 @@ Keine offenen fachlichen Fragen zu den geprüften Punkten.
 | In F-015 kann eine nachträgliche Bewertung des Fundbüros missverständlich wirken, wenn sie als Änderung des Ablageorts interpretiert wird. | Das Fundbüro darf den geschätzten Wert ändern, aber nicht den Status „direkte Übergabe gesperrt“ oder den Ablageort „Fundbüro“ zurücksetzen. | Die Neuschätzung trennt Wertbeurteilung von Übergabesicherheit. |
 | Die Bezeichnung „Konto“ kann eine Passwortregistrierung suggerieren. | F-001/F-002 sollen ausdrücklich von telefonbasierter Registrierung und Anmeldung sprechen. | Begriffe und Implementierung sollten der gewählten Geschäftsregel entsprechen. |
 
-## Zu ändernde Artefakte
+## Durchgeführte Änderungen
 
-- **F-001:** E-Mail-/Passwortregistrierung durch Registrierung mit Telefonnummer und Verifizierungscode ersetzen.
-- **F-002:** Anmeldung durch Telefonnummer und Verifizierungscode statt gültiger Zugangsdaten/E-Mail-Passwort ersetzen.
-- **F-003:** Die verpflichtende Wertauswahl bei der Fundmeldung ergänzen.
-- **F-008:** 10-km-Radius, vergrößerbaren Radius, Verhalten bei weniger als drei Treffern und die Ersetzung der doppelten Akzeptanzkriterien ergänzen.
-- **F-015:** Einheitliche Liste sensibler Gegenstände, Schätzwertoptionen und verpflichtende Fundbüroabgabe bei „weiß ich nicht“ festlegen.
-- **F-025:** SMS und Anruf als Benachrichtigungswege ergänzen.
-- **US10:** „Wertvolle Gegenstände“ durch dieselbe verbindliche Liste sensibler Gegenstände ersetzen und keine Nachweispflicht des Finderwerts vorsehen.
-- **Anwendungsfall:** Telefonregistrierung, die einheitliche sensible Gegenstands­liste und den Fundbüroablauf ohne direkte Übergabe entsprechend aktualisieren.
+| ID | Version alt → neu | alte Formulierung (kurz) | neue Formulierung (kurz) | Begründung |
+|---|---|---|---|---|
+| F-001 | 1 → 2 | Registrierung mit E-Mail-Adresse und Passwort | Registrierung mit Telefonnummer und Verifizierungscode | Passt zu Giovannis Kenntnisstand und zum telefonbasierten Ablauf. |
+| F-002 | 1 → 2 | Anmeldung mit gültigen Zugangsdaten | Anmeldung mit Telefonnummer und Verifizierungscode | Stimmt die Anmeldung auf die passwortlose Registrierung ab. |
+| F-003 | 1 → 2 | Fundmeldung ohne Wertauswahl | Pflichtauswahl: „unter 100 €“, „100 € oder mehr“ oder „weiß ich nicht“ | Der Wert wird für die Entscheidung über den Übergabeweg benötigt. |
+| F-008 | 1 → 2 | Fundbüros „in der Nähe“ anzeigen | 10-km-Radius, vergrößerbar; bei weniger als drei Treffern die drei nächsten anzeigen | Legt Suchbereich und Verhalten bei wenigen Treffern fest; doppelte Kriterien wurden ersetzt. |
+| F-015 | 1 → 2 | Unbestimmte Liste, etwa „Wertsache“ | Verbindliche Liste und Wertgrenzen; „weiß ich nicht“ sperrt direkte Übergabe; Neuschätzung wird protokolliert | Vereinheitlicht die Einstufung und macht die Sperre und spätere Neuschätzung nachvollziehbar. |
+| F-025 | 1 → 2 | Benachrichtigung per Push oder E-Mail | Push, E-Mail, SMS oder Anruf | Entspricht den Benachrichtigungswegen in Szenario und Anwendungsfall. |
+| US10 | – → – (nicht versioniert) | „Wertvolle Gegenstände“, „usw.“ | Verbindliche Liste und Wertauswahl; kein Wertnachweis erforderlich | Vermeidet unbestimmte Kategorien und stimmt die Regel mit F-015 ab. |
+| Anwendungsfall | – → – (nicht versioniert) | Beispiele sensibler Gegenstände; Fundbüro wird angezeigt | Verbindliche Liste; bei sensiblen oder unklaren Werten keine Chat-Übergabe; Neuschätzung protokolliert, Gegenstand bleibt im Fundbüro | Stimmt Ablauf und Fundbüroregel mit F-015 und US10 ab. |
 
 ## Begründung der Überarbeitung
 
