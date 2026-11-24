@@ -1,12 +1,29 @@
-# SWE1 – Übungen 3 und 4, WS 2026/27
+# SWE1 – Übungen 3 bis 5, WS 2026/27
 
 ## Wegweiser
 
 - **Übung 3:** Die Schritte unten führen durch Anforderungen, Review, Substantivextraktion sowie Objekt- und Zustandsdiagramm. Es gelten die [KI-Freigaben für Übung 3](kurs/uebung-03.md).
-- **Git im Zweierteam:** Folgen Sie vor Übung 4 der [vollständigen Anleitung zur Git-Teamarbeit](kurs/git-teamarbeit.md): bisherige Ergebnisse sichern, eigenes Team-Repository einrichten und vor jeder Übung die Lehrvorlage übernehmen. Bereits bestehende Team-Repositories werden weiterverwendet.
+- **Git im Zweierteam:** Die [Anleitung zur Git-Teamarbeit](kurs/git-teamarbeit.md) zeigt, wie Sie bisherige Ergebnisse sichern und vor jeder Übung die Lehrvorlage übernehmen. Verwenden Sie Ihr bestehendes Team-Repository weiter.
 - **Übung 4:** [Aufgaben und aktualisierte KI-Grenzen](kurs/uebung-04.md): Klassendiagramm eigenständig erstellen und als `docs/04-klassendiagramm/klassendiagramm.png` committen. Mit [model-to-java](.agents/skills/model-to-java/SKILL.md) zunächst eine kleine lauffähige Java-Version nach `src/` übertragen, selbst testen und reviewen, danach gezielt vervollständigen. Zwei bis drei Klassen sind eine Empfehlung; auch alle Klassen im Bild sind möglich. Später kann auf eigenen Auftrag ein separates Ist-Diagramm aus dem geprüften Code entstehen.
+- **Übung 5:** [Klassendiagramm verfeinern, Komponentendiagramm erstellen und beide Modelle besprechen](#übung-5--einstieg).
 
-`docs/` und `src/` enthalten Ihre Ergebnisse. `kurs/`, `.agents/skills/`, `.github/` und `AGENTS.md` werden vom Kurs gepflegt. Die Ausgangsvisionen unter `docs/` sind einmaliges Startmaterial, keine regelmäßig zu ersetzenden Vorlagen.
+`docs/` und `src/` enthalten Ihre Ergebnisse. Der Kurs pflegt Regeln, Skills, Übungshinweise und die portable IntelliJ-Konfiguration (`SWE1.iml`, `.idea/modules.xml`, `.run/Main.run.xml`). Die Ausgangsvisionen unter `docs/` sind einmaliges Startmaterial, keine regelmäßig zu ersetzenden Vorlagen.
+
+## Übung 5 – Einstieg
+
+1. [Lehrvorlage übernehmen und gemeinsamen Übungsbranch anlegen](kurs/git-teamarbeit.md#vor-jeder-übung-vorlage-übernehmen-und-branch-anlegen), zum Beispiel `uebung-05-team`.
+2. Verfeinern Sie das Klassendiagramm eigenständig und erstellen Sie Ihr Komponentendiagramm mit benötigten und bereitgestellten Schnittstellen. Legen Sie beide als lesbare Bilder ab, empfohlen im Ordner [docs/05-komponentenmodell/](docs/05-komponentenmodell/).
+3. Sichern Sie beide Diagramme gemeinsam im eigenen Modellierungs-Commit und pushen Sie den Stand zu `origin`.
+4. Starten Sie `copilot` im IntelliJ-Terminal. Rufen Sie `/uml-model-review` mit [beiden Bildern als Anhängen](kurs/uebung-05.md#modell-review-mit-copilot) auf.
+5. Beantworten Sie die Fragen im Team. Halten Sie zu mindestens drei besprochenen Punkten Ihre Antwort, Entscheidung und Begründung fest. Überarbeiten Sie die Modelle bei Bedarf selbst. Committen und pushen Sie das Reviewdokument und gegebenenfalls die Änderungen anschließend.
+
+Die Aufgaben und der empfohlene Ablauf stehen in [Übung 5](kurs/uebung-05.md).
+
+## Java in IntelliJ starten – ab Übung 4
+
+Öffnen Sie über **File → Open** den gesamten Repository-Ordner. Nach der Codegenerierung öffnen Sie `src/Main.java` und klicken links neben `main` auf das grüne Dreieck → **Run 'Main.main()'**. Alternativ wählen Sie oben **SWE1 Main** und klicken auf das grüne Dreieck. Kontrollieren Sie die Ausgabe im Fenster **Run**. Vor der Codegenerierung ist noch keine `Main.java` vorhanden.
+
+Falls IntelliJ ein JDK verlangt: **File → Project Structure → Project → SDK**, ein installiertes JDK wählen; falls es nicht gelistet ist, **Add SDK → JDK** und dessen Installationsordner wählen. Diese einmalige lokale Auswahl wird nicht geteilt. Weitere Hilfe für bestehende Projekte und Fehlermeldungen steht in der [IntelliJ-Startanleitung](kurs/uebung-04.md#intellij-idea-standardweg).
 
 ## Übung 3
 
