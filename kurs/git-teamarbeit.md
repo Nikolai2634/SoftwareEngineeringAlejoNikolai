@@ -152,7 +152,7 @@ git fetch origin
 git switch --track origin/uebung-04-team
 ```
 
-Diese Erstellung gilt für einen **neuen** Branch. Existiert er lokal schon, verwenden Sie `git switch uebung-04-team` und anschließend `git pull --ff-only origin uebung-04-team`. Verwenden Sie bei der nächsten Übung einen neuen Namen. `-u` beziehungsweise `--track` verbindet den lokalen Übungsbranch mit dem Teamziel.
+Diese Erstellung gilt für einen **neuen** Branch. Existiert er lokal schon, verwenden Sie `git switch uebung-04-team` und anschließend `git pull --ff-only origin uebung-04-team`. Für Übung 5 ersetzen Sie in den Branch-Befehlen `uebung-04-team` durch `uebung-05-team`. `-u` beziehungsweise `--track` verbindet den lokalen Übungsbranch mit dem Teamziel.
 
 ## Während der Übung: gemeinsamer Branch, abwechselnde Bearbeitung
 
@@ -187,11 +187,15 @@ Prüfen Sie jeweils, dass nur die beabsichtigten Dateien vorgemerkt sind. PNGs m
 
 Persönliche Branches sind optional für Teams, die diesen Ablauf bereits sicher beherrschen; für diese Übung genügt der gemeinsame Branch mit verabredeten Übergaben.
 
+### Übung 5 – Modellierungs-Commit und Review
+
+Sichern Sie beide eigenständig erstellten Diagramme gemeinsam in einem eigenen Commit und pushen Sie ihn auf den Team-Branch, bevor Sie das KI-Review starten. Die [Befehle für den Modellierungs-Commit](uebung-05.md#vor-dem-ki-review) nutzen beispielhaft `uebung-05-team`. Sichern Sie anschließend das Reviewdokument und gegebenenfalls eigenständige Modellrevisionen in einem weiteren Commit auf demselben Branch. Separate Review- und Revisions-Commits sind ebenfalls möglich. Pushen Sie die neuen Commits zu `origin`.
+
 ## Nach der Übung: Pull Request und Review
 
-1. Prüfen Sie auf GitHub im **Team-Repository**, dass alle Arbeit auf dem Übungsbranch liegt. Erstellen Sie einen Pull Request mit Ziel (`base`) `main` und Quelle (`compare`) `uebung-04-team`.
-2. Beschreiben Sie kurz den Ausschnitt und Ihre tatsächlichen Tests. Fordern Sie das andere Teammitglied zum Review auf. Prüfen Sie gemeinsam Änderungen und Commit-Liste; in Übung 4 müssen der eigene Modellierungs-Commit und der spätere Code-Commit getrennt erkennbar sein.
-3. Das andere Mitglied prüft vor dem Merge das PNG, die Passung des Codes und die Ausführbarkeit. Erklären Sie sich das Ergebnis ohne KI. Korrekturen erfolgen auf dem Übungsbranch und werden erneut geprüft.
+1. Prüfen Sie auf GitHub im **Team-Repository**, dass alle Arbeit auf dem Übungsbranch liegt. Erstellen Sie einen Pull Request mit Ziel (`base`) `main` und Quelle (`compare`) `uebung-04-team` beziehungsweise `uebung-05-team`.
+2. Beschreiben Sie kurz den Ausschnitt und Ihre tatsächlichen Prüfungen. Fordern Sie das andere Teammitglied zum Review auf. Prüfen Sie gemeinsam die Änderungen und die Commit-Liste. Der eigene Modellierungs-Commit bleibt in Übung 4 vom Code-Commit und in Übung 5 von den späteren Review- und Revisionsständen getrennt erkennbar.
+3. Das andere Mitglied prüft vor dem Merge in Übung 4 das PNG, die Passung des Codes und die Ausführbarkeit. In Übung 5 prüft es beide Diagramme und das Reviewdokument. Erklären Sie sich das Ergebnis ohne KI. Korrekturen erfolgen auf dem Übungsbranch und werden erneut geprüft.
 4. Führen Sie den geprüften PR auf GitHub zusammen. Verwenden Sie **Create a merge commit**, damit die getrennten Commits erhalten bleiben. **Kein Squash-Merge.** Ist diese Merge-Art nicht verfügbar oder gibt es Konflikte, holen Sie technische Hilfe statt die Trennung aufzugeben.
 5. Beide Personen aktualisieren bei sauberem Arbeitsbaum ihren lokalen Stand:
 
@@ -201,7 +205,7 @@ git pull --ff-only origin main
 git status
 ```
 
-Kontrollieren Sie die Ergebnisdateien auf `main`, in Übung 4 insbesondere `docs/04-klassendiagramm/klassendiagramm.png` und `src/Main.java` samt fachlichen Klassen. Branches müssen für diesen Ablauf nicht gelöscht werden. Vor der nächsten Übung beginnt wieder die Vorlagen-Aktualisierung.
+Kontrollieren Sie die Ergebnisdateien auf `main`, in Übung 4 insbesondere `docs/04-klassendiagramm/klassendiagramm.png` und `src/Main.java` samt fachlichen Klassen, in Übung 5 beide Modellbilder und das Reviewdokument. Branches müssen für diesen Ablauf nicht gelöscht werden. Vor der nächsten Übung beginnt wieder die Vorlagen-Aktualisierung.
 
 ## Grenzen und technische Prüfung
 

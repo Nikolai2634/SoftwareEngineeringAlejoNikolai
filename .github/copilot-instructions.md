@@ -1,3 +1,3 @@
 # SWE1
 
-Beachte [AGENTS.md](../AGENTS.md) und die getrennten Freigaben für [Übung 3](../kurs/uebung-03.md) und [Übung 4, WS 2026/27](../kurs/uebung-04.md). Das erste Klassendiagramm entsteht ohne KI; Java erst nach dem eigenen Modellierungs-Commit. In Übung 4 gilt die aktualisierte iterative Durchführung in den Kurshinweisen: zuerst eine lauffähige Demo, dann Test, Review und Ergänzung. Zwei bis drei Klassen sind eine Empfehlung; alle Klassen im Bild dürfen beauftragt werden. Vereinfachungen brauchen eine ausdrückliche Auswahl. Ein separates Ist-Diagramm aus geprüftem Code ist erst später auf ausdrücklichen Auftrag erlaubt.
+Beachte [AGENTS.md](../AGENTS.md) und die dort verlinkten, getrennten KI-Freigaben für die Übungen 3–5. In Übung 5 bearbeitet das Team Aufgaben 1–3 eigenständig. Für Aufgabe 4 ist nach dem eigenen Commit mit beiden Diagrammen das Modell-Review gemäß [uml-model-review](../.agents/skills/uml-model-review/SKILL.md) freigegeben.

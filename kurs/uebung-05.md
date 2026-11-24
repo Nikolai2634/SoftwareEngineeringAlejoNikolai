@@ -58,7 +58,7 @@ Erweitertes Klassendiagramm, Komponentendiagramm und Reviewdokument im Team-Repo
 
 ## Empfohlene Durchführung im Repository
 
-Die folgenden Pfade, Befehle und die Berichtstruktur sind organisatorische Empfehlungen zur Umsetzung des veröffentlichten Übungsblatts, keine zusätzlichen fachlichen Abgabeanforderungen. Sie setzen voraus, dass der Kurs den neuen Skill und die zugehörigen Freigaben bereitgestellt hat.
+Die folgenden Pfade und Befehle sind Empfehlungen für die Arbeit mit dem Repository. Die verbindlichen Anforderungen stehen oben in den Aufgaben und im Abschnitt „Abgabe“.
 
 ### Arbeitsstand und Ablage
 
@@ -72,7 +72,7 @@ docs/05-komponentenmodell/
   modell-review.md           # entsteht erst im Review
 ```
 
-Andere eindeutige Dateinamen und gut lesbare Bildformate sind möglich. Wenn Sie die Zuordnung der Klassen zu Komponenten in einer separaten Tabelle dokumentieren, stellen Sie diese für den Review ebenfalls bereit. Nutzen Sie den für die Modelle relevanten eigenen Anwendungsfall als fachliche Referenz. Die bestehende Java-Demo aus Übung 4 muss für diese Modellierungsaufgabe nicht angepasst werden.
+Andere eindeutige Dateinamen und gut lesbare, von Copilot unterstützte Bildformate sind möglich. Eine separate Zuordnungstabelle ist nur nötig, wenn die Zuordnung im Diagramm fehlt. Nutzen Sie bei Bedarf den relevanten eigenen Anwendungsfall als fachliche Referenz. Die Java-Demo aus Übung 4 kann während dieser Modellierungsaufgabe den bisherigen Stand abbilden.
 
 ### Vor dem KI-Review
 
@@ -91,37 +91,17 @@ Prüfen Sie vor dem Commit sämtliche vorgemerkten Dateien und vor dem Push das 
 
 ### Modell-Review mit Copilot
 
-Starten Sie eine neue Copilot-Sitzung im Team-Repository. Beispielauftrag, sofern der Skill installiert und erkannt wird:
+Öffnen Sie den Team-Repository-Ordner in IntelliJ IDEA und starten Sie im integrierten **Terminal** mit `copilot` eine neue Sitzung. Geben Sie den folgenden Auftrag als eine Nachricht ein. Tippen Sie für beide Anhänge `@` und den jeweiligen Dateipfad. Mit **Tab** übernehmen Sie einen passenden Pfadvorschlag.
 
 ```text
-/uml-model-review
-Prüfe unsere selbst erstellten und vor dem Review committeten Diagramme:
-@docs/05-komponentenmodell/klassendiagramm.png
-@docs/05-komponentenmodell/komponentendiagramm.png
-Stelle uns höchstens drei konkrete Fragen pro Runde.
-Beziehe bei Bedarf unseren relevanten Anwendungsfall und unsere
-separate Klassenzuordnung ein (wir geben dir die jeweiligen Pfade).
-Halte die Fragen, Befunde und unsere Entscheidungen auf unseren Auftrag
-in docs/05-komponentenmodell/modell-review.md fest.
-Erzeuge oder korrigiere keine Diagramme und ändere keinen Code.
+/uml-model-review Prüfe unsere beiden UML-Diagramme aus Übung 5. Dokumentiere das Review. @docs/05-komponentenmodell/klassendiagramm.png @docs/05-komponentenmodell/komponentendiagramm.png
 ```
 
-Kontrollieren Sie, dass Copilot tatsächlich beide Bilder als Bildanlagen erkennt und lesen kann. Ein Dateipfad allein garantiert keine Bildverarbeitung. Bei fehlendem Bildzugriff oder nicht erkanntem Skill holen Sie technische Hilfe. Der Agent soll keine unlesbaren Symbole oder fehlenden fachlichen Informationen erraten. Diskutieren Sie die Fragen im Team, bevor die nächste Runde beginnt.
+Copilot muss beide Anhänge als Bilder erkennen und lesen können. Bei fehlendem Bildzugriff prüfen Sie die beiden `@Pfad`-Anhänge. Falls Ihr Tarif eine manuelle Modellauswahl bietet, können Sie per `/model` ein verfügbares Modell mit Bildunterstützung wählen. Ist nur die automatische Auswahl verfügbar und bleibt der Bildzugriff aus, wenden Sie sich an die Lehrperson. Sind Beschriftungen zu klein, exportieren Sie die Diagramme lesbarer. Sichern und pushen Sie geänderte Bilder vor dem Review. Wird der Skill nicht erkannt, prüfen Sie mit `/skills list`, ob `uml-model-review` angezeigt wird. Prüfen Sie bei fehlendem Eintrag den Vorlagenstand und starten Sie Copilot im Repository-Ordner neu. Geben Sie bei weiteren Problemen die konkrete Meldung und die Ausgabe von `copilot --version` an. [GitHub-Dokumentation zu Bildanhängen in Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview#attach-images-and-pdfs)
 
 ### Review dokumentieren
 
-Eine mögliche knappe Struktur für das Reviewdokument:
-
-- Prüfgrundlage: Diagrammpfade, Ausgangscommit, gegebenenfalls Zuordnungstabelle und Anwendungsfall.
-- Grenzen: unlesbare Stellen, fehlender Kontext oder nicht geprüfte Aspekte.
-
-| ID | Modellstelle / Quelle | Befund und Kategorie | Reviewfrage | Antwort des Teams | Entscheidung und Begründung | Umgang mit Vorschlag / Änderung |
-|---|---|---|---|---|---|---|
-| R-01 | | | | | | |
-| R-02 | | | | | | |
-| R-03 | | | | | | |
-
-Kategorien gemäß Aufgabenblatt: tatsächliches Modellierungsproblem, mögliches fachliches Missverständnis, offene Entscheidung, begründbare Alternative. Die Antwort, Entscheidung und Begründung stammen vom Team; offene Punkte bleiben als offen erkennbar. Auch eine begründete Entscheidung gegen eine Änderung ist ein gültiges Ergebnis.
+Beantworten Sie die Fragen gemeinsam im Team. Prüfen Sie im Reviewdokument, ob Ihre Antworten, Entscheidungen und Begründungen zu mindestens drei besprochenen Punkten korrekt festgehalten sind. Auch eine begründete Entscheidung für das bestehende Modell zählt.
 
 ### Nach dem Review
 
