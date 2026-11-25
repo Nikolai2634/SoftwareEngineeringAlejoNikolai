@@ -135,3 +135,180 @@ Fallstudie: **Fundbüro-App**
 2. **Standortfreigabe:** Ein Finder erlaubt die Standortfreigabe. Das System ermittelt den aktuellen Standort und sortiert die Fundbüros nach Entfernung/Ankunftszeit aufsteigend.
 3. **Keine Standortfreigabe:** Ein Finder erlaubt die Standortbestimmung nicht. Das System zeigt ein Eingabefeld für Adresse oder PLZ.
 4. **Ungültige PLZ:** Der Finder gibt die PLZ „00000“ ein. Das System zeigt die Meldung „PLZ nicht gefunden“.
+
+## F-011: Fundsachen suchen
+
+**Anforderung:**
+
+Nach Erstellen einer Verlustmeldung muss das System dem Verlierer die Möglichkeit bieten, passende Fundmeldungen anhand von Gegenstandsart, Ort, Datum und optionalen Merkmalen zu suchen.
+
+Akzeptanzkriterien: 
+
+1. **Erfolgsfall:** Ein Verlierer erstellt eine Verlustmeldung für eine „blaue Geldbörse“, verloren am „19.11.2026“ in „München Hbf“. Das System zeigt alle Fundmeldungen mit Gegenstandsart „Geldbörse“ an, deren Funddatum innerhalb von 7 Tagen und deren Fundort innerhalb von 10 km liegt.
+2. **Relevanzsortierung:** Bei mehreren Treffern werden Fundmeldungen mit übereinstimmender Gegenstandsart, näherem Fundort und ähnlichem Funddatum weiter oben angezeigt.
+3. **Keine Treffer:** Es existiert keine passende Fundmeldung. Das System zeigt „Keine passenden Fundsachen gefunden“ an und bietet an, den Suchradius oder Zeitraum zu erweitern.
+4. **Unvollständige Angeben:** Der Verlierer gibt nur die Gegenstandsart „Schlüssel“ ein. Das System führt die Suche trotzdem durch und zeigt passende Fundmeldungen, sortiert nach Relevanz.
+
+## F-014: Abgabe bestätigen
+
+**Anforderung:**
+
+Nach Übergabe einer Fundsache muss das System dem Finder die Möglichkeit bieten, eine digitale Bestätigung mit Fundnummer, Datum, Uhrzeit und Abgabeort zu erhalten.
+
+Akzeptanzkriterien:
+
+1. **Erfolgsfall:** Ein Finder gibt eine Fundsache im Fundbüro ab. Die Mitarbeitenden bestätigen die Abgabe per QR-Code. Das System erzeugt eine Bestätigung mit Fundnummer, Datum, Uhrzeit, Fundbüro und Status „Abgegeben“.
+
+2. **Abrufbar bleiben:** Der Finder meldet sich ab und erneut an. Die Abgabe-Bestätigung ist weiterhin in seinem Profil bzw. unter „Meine Fundmeldungen“ abrufbar.
+
+3. **Download:** Der Finder wählt „Bestätigung herunterladen“. Das System stellt eine PDF-Datei mit allen Pflichtangaben bereit.
+
+4. **Fehlerfall**: Der QR-Code ist ungültig oder wurde bereits verwendet. Das System verhindert die Bestätigung und zeigt eine Fehlermeldung an, etwa „QR-Code ungültig oder bereits verwendet“.
+
+## F-019: Sensible Fundsachen sperren
+
+**Anforderung:**
+
+Nach Kennzeichnung einer Fundsache als Ausweis, Bankkarte, Schlüssel, Handy, Laptop oder Wertsache muss das System die direkte Übergabe deaktivieren und zur Abgabe im Fundbüro leiten.
+
+Akzeptanzkriterien:
+
+1. **Erfolgsfall:** Ein Finder wählt bei einer Fundmeldung die Kategorie „Ausweis“. Das System zeigt eine Warnung an und bietet ausschließlich die Option „Abgabe im Fundbüro“ an.
+2. **Erfolgsfall:** Ein Finder wählt bei einer Fundmeldung die Kategorie „Ausweis“. Das System zeigt eine Warnung an und bietet ausschließlich die Option „Abgabe im Fundbüro“ an.
+3. **Weiterleitung:** Nach Bestätigung der sensiblen Fundsache zeigt das System automatisch das nächstgelegene Fundbüro mit Adresse und Öffnungszeiten an.
+4. **Fehlerfall:** Ein Finder versucht, über die API oder eine manipulierte Eingabe eine direkte Übergabe für einen Ausweis anzustoßen. Das System lehnt die Anfrage ab und erstellt keine Übergabevereinbarung.
+
+## NF-001: Antwortzeit der Fundbüro-Suche
+
+**Anforderung:**
+
+Bei bis zu 100 gleichzeitigen Suchanfragen muss das System mindestens 95% der Ergebnisse innerhalb von 3 Sekunden anzeigen.
+
+1. Bei 100 parallelen Anfragen erreichen mindestens 95% eine Antwortzeit von höchstens 3 Sekunden. 
+
+2. Gemessen wird bis zur vollständigen Anzeige der Liste. 
+
+3. Überschreitet das 95-Perzentil 3 Sekunden, ist die Anforderung nicht erfüllt. 
+
+4. Der Test wird dreimal wiederholt; mindestens zwei Durchläufe müssen bestehen.
+
+## NF-005: Datenschutz bei Fotos
+
+**Anforderung:**
+
+Fotos mit erkennbaren Ausweisen, Karten oder Schlüsseln dürfen nicht öffentlich angezeigt werden.
+
+1. **Erfolgsfall:** Ein Finder lädt ein Foto einer geschlossenen Geldbörse hoch. Das System akzeptiert das Foto und zeigt es ausschließlich in der zugehörigen Fundmeldung an.
+2. **Ausweis erkannt:** Ein Finder lädt ein Foto hoch, auf dem ein Personalausweis erkennbar ist. Das System schwärzt automatisch die Dokumentbereiche oder verhindert die Veröffentlichung des Fotos.
+3. **Bankkarte erkannt:** Ein Finder lädt ein Foto mit einer sichtbaren EC- oder Kreditkarte hoch. Das System verhindert die öffentliche Anzeige und fordert den Nutzer auf, ein Foto ohne Kartendetails hochzuladen.
+4. **Schlüssel erkannt**: Ein Finder lädt ein Foto eines Schlüssels hoch. Das System zeigt das Foto nicht öffentlich an und warnt, dass Schlüssel nur über das Fundbüro abgegeben werden dürfen.
+
+
+Übung 4: 
+
+
+## Features
+
+| Feature                                     | Enthaltene Anforderungen                             | Nutzerwert                                                                                  |
+| ------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **F1: Konto und Anmeldung**                 | F-001, F-002, F-030                                  | Nutzer können sich registrieren, anmelden und ihre Daten verwalten.                         |
+| **F2: Fundmeldung**                         | F-003, F-004, F-005, F-023, F-024, F-031             | Finder können eine Fundsache melden, Fotos hochladen und sensible Gegenstände kennzeichnen. |
+| **F3: Verlustmeldung und Suche**            | F-010, F-011, F-012, F-005, F-006, F-007             | Verlierer können einen Verlust melden, Fotos hochladen und passende Fundsachen finden.      |
+| **F4: Fundbüro-Finder**                     | F-008, F-009, NF-001                                 | Finder und Verlierer finden Fundbüros inklusive Öffnungszeiten und Route.                   |
+| **F5: Sichere Fundabgabe**                  | F-013, F-014, F-019, F-022                           | Finder geben Fundsachen sicher ab und erhalten eine Bestätigung.                            |
+| **F6: Fundabholung und Eigentumsprüfung**   | F-015, F-016, F-026                                  | Verlierer können Fundsachen abholen und ihr Eigentum nachweisen.                            |
+| **F7: Direkte Übergabe**                    | F-017, F-018, F-020, F-021, F-023, F-024             | Finder und Verlierer können eine sichere direkte Übergabe vereinbaren.                      |
+| **F8: Benachrichtigungen und Status**       | F-025, F-026                                         | Nutzer erfahren, wenn es einen Treffer gibt und wie der Fall steht.                         |
+| **F9: Fundbüro-Verwaltung**                 | F-027, F-028, F-029                                  | Fundbüro-Mitarbeitende erfassen Fundsachen, bestätigen Abholungen und verwalten Fristen.    |
+| **F10: KI-Unterstützung**                   | F-006, F-007, NF-012                                 | Nutzer erhalten Unterstützung bei Fotoerkennung und vollständiger Beschreibung.             |
+| **F11: Datenschutz und Sicherheit**         | F-030, F-031, NF-004, NF-005, NF-006, NF-007, NF-008 | Das System schützt personenbezogene Daten, Fotos und Kommunikation.                         |
+| **F12: Barrierefreiheit und Benutzbarkeit** | NF-009, NF-010                                       | Die App ist für möglichst viele Nutzer verständlich und bedienbar.                          |
+| **F13: Wartbarkeit und Betrieb**            | NF-003, NF-011                                       | Das System bleibt verfügbar und kann ohne Codeänderung erweitert werden.                    |
+
+## Roadmap
+
+| Priorität    | Feature                                     | Begründung                                                                                                              |
+| ------------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Sofort**   | **F1: Konto und Anmeldung**                 | Ohne Konto können Meldungen, Status und Chat nicht zuverlässig einer Person zugeordnet werden.                          |
+| **Sofort**   | **F2: Fundmeldung**                         | Ohne Fundmeldung gibt es keinen Fund, keine Suche und keine Rückgabe.                                                   |
+| **Sofort**   | **F3: Verlustmeldung und Suche**            | Ohne Verlustmeldung kann ein Verlierer seine Fundsache nicht finden.                                                    |
+| **Sofort**   | **F4: Fundbüro-Finder**                     | Die App muss zeigen, wo eine Fundsache sicher abgegeben oder abgeholt werden kann.                                      |
+| **Sofort**   | **F5: Sichere Fundabgabe**                  | Die Abgabe und Bestätigung ist der Kernprozess für Finder und Fundbüro.                                                 |
+| **Sofort**   | **F6: Fundabholung und Eigentumsprüfung**   | Ohne Eigentumsprüfung könnte eine falsche Person die Fundsache erhalten.                                                |
+| **Sofort**   | **F8: Benachrichtigungen und Status**       | Nutzer müssen wissen, ob es einen Treffer gibt und welchen Status ihre Meldung hat.                                     |
+| **Sofort**   | **F9: Fundbüro-Verwaltung**                 | Ohne Erfassung und QR-Code-Bestätigung kann das Fundbüro die Fundsachen nicht verwalten.                                |
+| **Sofort**   | **F11: Datenschutz und Sicherheit**         | Datenschutz, Foto-Schutz und sichere Kommunikation sind für eine Fund-App unverzichtbar.                                |
+| **Nächstes** | **F7: Direkte Übergabe**                    | Die direkte Übergabe ist nützlich, aber das Fundbüro bleibt zunächst der sichere Standardweg.                           |
+| **Nächstes** | **F10: KI-Unterstützung**                   | KI verbessert Matching und Beschreibung, ist für den ersten Release aber nicht zwingend notwendig.                      |
+| **Nächstes** | **F12: Barrierefreiheit und Benutzbarkeit** | Wichtig für Qualität und Reichweite; grundlegende Barrierefreiheit sollte früh, erweiterte Optimierung danach erfolgen. |
+| **Später**   | **F13: Wartbarkeit und Betrieb**            | Erweiterte Monitoring-, Skalierungs- und Admin-Funktionen sind wichtig, aber nicht für den ersten Release zwingend.     |
+| **Nie**      | **Öffentliche Anzeige sensibler Fotos**     | Ausweise, Karten und Schlüssel dürfen nicht öffentlich sichtbar sein; das ist bewusst ausgeschlossen.                   |
+| **Nie**      | **Direkte Übergabe sensibler Fundsachen**   | Ausweise, Karten, Schlüssel, Handys und Wertsachen werden ausschließlich über das Fundbüro zurückgegeben.               |
+| **Nie**      | **Automatische Garantie für Finderlohn**    | Die App kann Finderlohn berechnen und dokumentieren, aber keinen Rechtsanspruch durchsetzen.                            |
+
+## Nichtfunktionale Anforderungen zuordnen
+
+| Nichtfunktionale Anforderung        | Zugeordnetes Feature                    | Art                                 |
+| ----------------------------------- | --------------------------------------- | ----------------------------------- |
+| NF-001: Antwortzeit Fundbüro-Suche  | F4: Fundbüro-Finder                     | Feature-spezifisch                  |
+| NF-002: Antwortzeit Matching und KI | F3, F10                                 | Feature-spezifisch                  |
+| NF-003: Verfügbarkeit               | F13: Wartbarkeit und Betrieb            | Übergreifend                        |
+| NF-004: Datenschutz im Chat         | F7, F11                                 | Feature-spezifisch und übergreifend |
+| NF-005: Datenschutz bei Fotos       | F2, F3, F11                             | Feature-spezifisch und übergreifend |
+| NF-006: Datenminimierung            | F11: Datenschutz und Sicherheit         | Übergreifend                        |
+| NF-007: Löschbarkeit                | F1, F11                                 | Übergreifend                        |
+| NF-008: Sicherheit                  | F1, F7, F11                             | Übergreifend                        |
+| NF-009: Barrierefreiheit            | F12: Barrierefreiheit und Benutzbarkeit | Übergreifend                        |
+| NF-010: Benutzbarkeit               | F12: Barrierefreiheit und Benutzbarkeit | Übergreifend                        |
+| NF-011: Wartbarkeit                 | F13: Wartbarkeit und Betrieb            | Übergreifend                        |
+| NF-012: KI-Zuverlässigkeit          | F10: KI-Unterstützung                   | Feature-spezifisch                  |
+
+## Begründung: F5 sichere Fundabgabe
+
+**F5: Sichere Fundabgabe** ist **Sofort**, weil es der zentrale Prozess der App ist. Ein Finder muss eine Fundsache verlässlich abgeben können und einen Nachweis erhalten; sonst entsteht kein vertrauenswürdiger Übergabeprozess.
+
+**Nutzen für die Personas:**
+
+- **Thomas, der Finder:** Er kann die Geldbörse schnell und ohne direkten Kontakt zu Giovanni abgeben.
+- **Giovanni, der Verlierer:** Er weiß, dass die Fundsache dokumentiert im Fundbüro ist und kann sie nach Eigentumsprüfung abholen.
+- **Fundbüro-Mitarbeitende:** Sie erhalten eine strukturierte Fundmeldung und können die Übergabe nachvollziehen.
+
+**Abhängigkeiten:**
+
+- F5 benötigt **F2 Fundmeldung**, weil ohne Fundmeldung keine Fundsache existiert.
+- F5 benötigt **F4 Fundbüro-Finder**, damit der Finder weiß, wohin er gehen soll.
+- F5 benötigt **F11 Datenschutz und Sicherheit**, damit sensible Fotos und Daten geschützt werden.
+- F5 ist Voraussetzung für **F6 Fundabholung**, weil der Verlierer nur eine bereits abgegebene Fundsache abholen kann.
+
+**Implementierungsaufwand:**
+
+Der Aufwand ist mittel bis hoch, weil mehrere Teile zusammenarbeiten müssen:
+
+- Fundmeldung erstellen und speichern
+- Fundbüro-Suche und Route
+- QR-Code-basierte Abgabe-Bestätigung
+- Statusänderung „Abgegeben“
+- Benachrichtigung an Finder und Verlierer
+- Datenschutzprüfung für Fotos
+
+Trotzdem ist F5 unverzichtbar: Ohne sichere Abgabe wäre die App nur eine Suchmaschine für Fundsachen, aber kein vollständiges Fundbüro-System. Muss-Features sind genau die Funktionen, ohne die ein Release nicht erfolgreich wäre.
+
+## Begründung: F7 direkte Übergabe
+
+**F7: Direkte Übergabe** ist **Nächstes**, weil sie einen echten Nutzen hat, aber nicht für den ersten Release notwendig ist.
+
+**Nutzen:** Finder und Verlierer können unempfindliche Fundsachen schneller zurückgeben, ohne ein Fundbüro aufsuchen zu müssen.
+
+**Abhängigkeiten:**
+
+- F7 benötigt **F2** und **F3**, damit Fund- und Verlustmeldung existieren.
+- F7 benötigt **F11**, damit Identität, Chat und persönliche Daten geschützt sind.
+- F7 benötigt **F5**, damit es einen sicheren Fallback über das Fundbüro gibt.
+- F7 sollte erst nach F5 umgesetzt werden, weil die Fundbüro-Abgabe der sichere Standardprozess ist.
+
+**Aufwand:** Hoch, weil ihr Chat, Identitätsprüfung, Treffpunkt-Vorschläge, Blockier- und Meldefunktion, Finderlohn-Dokumentation und Sicherheitsregeln umsetzen müsst.
+
+Deshalb: **erst Fundbüro-Abgabe, dann direkte Übergabe.** Das reduziert Risiko, Datenschutzprobleme und Betrugsmöglichkeiten im ersten Release. Features mit hoher Komplexität und Sicherheitsrisiko sollten erst nach den Kernfunktionen kommen.
+
+
+
